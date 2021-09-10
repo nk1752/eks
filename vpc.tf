@@ -22,7 +22,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.2.0"
 
-  name                 = "nk-eks-vpc"
+  name                 = "eks-vpc"
   cidr                 = "10.11.0.0/16"
   azs                  = data.aws_availability_zones.available.names
   private_subnets      = ["10.11.1.0/24", "10.11.2.0/24", "10.11.3.0/24"]
