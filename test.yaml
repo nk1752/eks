@@ -1,0 +1,12 @@
+apiVersip: v1
+kind: Service
+metadata:
+  name: nginx-service-loadbalancer
+spec: 
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+    - protocal: TCP
+      port: 80
+      targetport: 80
